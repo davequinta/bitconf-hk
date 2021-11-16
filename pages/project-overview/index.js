@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header.js";
 import {Input} from "../../components/Input/Input.js";
 import {Screen} from "../../components/Screen/Screen.js";
 import {useRouter} from "next/router";
-import {PROJECTS} from "../home/constants";
+import {PROJECTS} from "../../constants/constants.js";
 import Router from "next/router";
 import swal from "sweetalert";
 import Image from "next/image";
@@ -35,10 +35,8 @@ const ProjectOverviewScreen = () => {
     <Screen>
       <Header iconName="back" iconAction={() => router.back()} />
       <div className="w-full h-full bg-blue-100 px-3 pt-10">
-        <label class="block text-gray-700 text-sm font-bold mb-2">
-          Nombre del Proyecto:
-        </label>
-        <span className="text-sm">{project?.title ?? ""}</span>
+        
+        <span className="block text-gray-700 text-xl font-bold mb-2">{project?.title ?? ""}</span>
         <div className="h-1/2 w-full relative">
             <Image objectFit="cover" src={project?.image ?? ""} alt="" layout="fill" />
           </div>
@@ -49,7 +47,7 @@ const ProjectOverviewScreen = () => {
         <label class="block text-gray-700 text-sm font-bold mb-2">
           Autor del Proyecto:
         </label>
-        <span className="text-sm">{project?.title ?? ""}</span>
+        <span className="text-sm">Jorge Ándres</span>
 
         <div className="absolute bottom-10 left-0 w-screen flex justify-center">
           <Button text="Votar" onClick={handleVote} />
