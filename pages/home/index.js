@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header.js";
 import {Screen} from "../../components/Screen/Screen.js";
 import Link from "next/link";
 import Router from "next/router";
-import {PROJECTS} from "./constants.js";
+import {PROJECTS} from "../../constants/constants.js";
 const Home = () => {
   const [menuShown, setMenuShown] = useState(false);
   return (

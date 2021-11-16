@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header.js";
 import {Input} from "../../components/Input/Input.js";
 import {Screen} from "../../components/Screen/Screen.js";
 import {useRouter} from "next/router";
-import {PROJECTS} from "../home/constants.js";
+import {PROJECTS} from "../../constants/constants.js";
 
 const ProjectOverviewScreen = () => {
   const [projectName, setProjectName] = useState("");
