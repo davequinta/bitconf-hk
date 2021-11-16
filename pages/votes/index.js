@@ -17,14 +17,14 @@ const ProjectOverviewScreen = () => {
     <Screen>
       <Header iconName="back" iconAction={() => router.back()} />
       <div className="w-full h-full bg-blue-100 p-3 flex justify-center items-center flex-col px-8">
-        <label class="block text-gray-700 text-lg font-bold text-center mb-10">
+        <label className="block text-gray-700 text-lg font-bold text-center mb-10">
           Voto realizado con éxito! Muchas gracias por tu participación ciudadana.
         </label>
-        <label class="block text-gray-700 text-sm font-bold mb-5">
+        <label className="block text-gray-700 text-sm font-bold mb-5">
           Saldo Restante:
         </label>
 
-        <label class="block text-gray-700 text-base font-bold mb-2">
+        <label className="block text-gray-700 text-base font-bold mb-2">
           0 tokens
         </label>
 

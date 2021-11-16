@@ -33,11 +33,11 @@ const ProjectOverviewScreen = () => {
     <Screen>
       <Header iconName="back" iconAction={() => router.back()} />
       <div className="w-full h-full bg-blue-100 px-3 pt-10">
-        <label class="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block text-gray-700 text-sm font-bold mb-2">
           Nombre del Proyecto:
         </label>
         <span className="text-sm">{project?.title ?? ""}</span>
-        <label class="block text-gray-700 text-sm font-bold mb-2 mt-5">
+        <label className="block text-gray-700 text-sm font-bold mb-2 mt-5">
           Descripción del Proyecto:
         </label>
         <span className="text-sm">{project?.description ?? ""}</span>

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const Button = ({text, onClick, variant = "primary"}) => {
   return (
     <button
-      class={`${
+      className={`${
         variant === "primary"
           ? "bg-burnt-sienna text-white hover:opacity-80 "
           : "bg-white border border-burnt-sienna hover:bg-burnt-sienna hover:text-white text-burnt-sienna"
