@@ -35,8 +35,15 @@ const ProjectOverviewScreen = () => {
     <Screen>
       <Header iconName="back" iconAction={() => router.back()} />
       <div className="w-full h-full bg-blue-100 px-3 pt-10">
+<<<<<<< HEAD
         
         <span className="block text-gray-700 text-xl font-bold mb-2">{project?.title ?? ""}</span>
+=======
+        <label className="block text-gray-700 text-sm font-bold mb-2">
+          Nombre del Proyecto:
+        </label>
+        <span className="text-sm">{project?.title ?? ""}</span>
+>>>>>>> main
         <div className="h-1/2 w-full relative">
             <Image objectFit="cover" src={project?.image ?? ""} alt="" layout="fill" />
           </div>
