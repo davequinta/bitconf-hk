@@ -18,7 +18,7 @@ const Home = () => {
       />
       <div className="w-full h-full p-3 pb-10">
         <div className="flex flex-row justify-between mb-10 items-center">
-          <h1 className="text-2xl text-burnt-sienna font-bold">Propuestas</h1>
+          <h1 className="text-2xl text-white font-bold">Propuestas</h1>
           <Link href="/add-project">
             <Button
               text="Nueva Propuesta"

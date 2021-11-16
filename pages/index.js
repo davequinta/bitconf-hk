@@ -19,12 +19,14 @@ export default function Home() {
         />
       </Head>
 
-      <main className="flex flex-col items-center bg-pale-cerulean justify-center w-full flex-1 px-20 text-center">
+      <main className="flex flex-col items-center bg-white justify-center w-full flex-1 px-20 text-center">
         <Image src={logo} width={100} height={100} layout="fixed" />
-        <h1 className="text-4xl font-bold my-20 text-white">jamii</h1>
+        <h1 className="text-4xl font-bold my-2 text-black">jamii</h1>
+        <diV className='my-10'>
         <Link href="/home">
           <Button text="Continuar" />
         </Link>
+        </diV>
       </main>
     </div>
   );

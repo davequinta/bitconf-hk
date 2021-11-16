@@ -7,6 +7,8 @@ import {useRouter} from "next/router";
 import {PROJECTS} from "../home/constants";
 import Router from "next/router";
 import swal from "sweetalert";
+import Image from "next/image";
+
 
 const ProjectOverviewScreen = () => {
   const [projectName, setProjectName] = useState("");
@@ -37,10 +39,17 @@ const ProjectOverviewScreen = () => {
           Nombre del Proyecto:
         </label>
         <span className="text-sm">{project?.title ?? ""}</span>
+        <div className="h-1/2 w-full relative">
+            <Image objectFit="cover" src={project?.image ?? ""} alt="" layout="fill" />
+          </div>
         <label class="block text-gray-700 text-sm font-bold mb-2 mt-5">
           Descripción del Proyecto:
         </label>
         <span className="text-sm">{project?.description ?? ""}</span>
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          Autor del Proyecto:
+        </label>
+        <span className="text-sm">{project?.title ?? ""}</span>
 
         <div className="absolute bottom-10 left-0 w-screen flex justify-center">
           <Button text="Votar" onClick={handleVote} />
