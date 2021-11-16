@@ -5,8 +5,7 @@ import Header from "../../components/Header/Header.js";
 import {Screen} from "../../components/Screen/Screen.js";
 import Link from "next/link";
 import Router from "next/router";
-
-import {PROJECTS} from "./constants";
+import {PROJECTS} from "./constants.js";
 const Home = () => {
   const [menuShown, setMenuShown] = useState(false);
   return (
@@ -20,10 +19,7 @@ const Home = () => {
         <div className="flex flex-row justify-between mb-10 items-center">
           <h1 className="text-2xl text-burnt-sienna font-bold">Propuestas</h1>
           <Link href="/add-project">
-            <Button
-              text="Nueva Propuesta"
-              variant="outlined"
-            />
+            <Button text="Nueva Propuesta" variant="outlined" />
           </Link>
         </div>
         {PROJECTS.map((project, index) => (
