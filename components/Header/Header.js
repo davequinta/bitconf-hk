@@ -8,9 +8,9 @@ import styles from "./Header.module.css";
 
 const Header = ({iconAction, iconName = "back", itemsShown = false}) => {
   return (
-    <div className="flex flex-row w-full bg-red-100 px-3 py-3">
+    <div className="flex flex-row w-full px-3 py-3">
       <div
-        className={`bg-blue-200 h-8 w-8 flex justify-center items-center cursor-pointer`}
+        className={`h-8 w-8 flex justify-center items-center cursor-pointer`}
         onClick={iconAction}>
         {iconName === "menu" ? (
           <Image src={menu} width={25} height={25} layout="fixed" />

@@ -3,72 +3,45 @@ import {Button} from "../../components/Button/Button.js";
 import {Card} from "../../components/Card/Card.js";
 import Header from "../../components/Header/Header.js";
 import {Screen} from "../../components/Screen/Screen.js";
+import Link from "next/link";
+import Router from "next/router";
+
+import {PROJECTS} from "./constants";
 const Home = () => {
   const [menuShown, setMenuShown] = useState(false);
   return (
     <Screen>
       <Header
+        iconName="menu"
         iconAction={() => setMenuShown(!menuShown)}
         itemsShown={menuShown}
       />
-      <div className="w-full h-full bg-blue-100 p-3">
-        <div className="flex flex-row justify-between mb-10">
-          <h1 className="text-2xl">Proyectos</h1>
-          <Button
-            text="Nueva Propuesta"
-            onClick={() => console.log("nueva propouesta")}
-            variant="outlined"
-          />
+      <div className="w-full h-full p-3 pb-10">
+        <div className="flex flex-row justify-between mb-10 items-center">
+          <h1 className="text-2xl text-burnt-sienna font-bold">Propuestas</h1>
+          <Link href="/add-project">
+            <Button
+              text="Nueva Propuesta"
+              onClick={() => console.log("nueva propouesta")}
+              variant="outlined"
+            />
+          </Link>
         </div>
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-        <Card
-          title="Proyecto 1"
-          date="19/02/2021"
-          priority="Alta"
-          image="https://red.novagob.org/wp-content/uploads/2017/07/sa_1500566267_561070_baches-san-bernabe-1038x513.jpg"
-        />
-
+        {PROJECTS.map((project, index) => (
+          <Card
+            key={project.title}
+            title={project.title}
+            date={project.date}
+            priority={project.priority}
+            image={project.image}
+            onClick={() =>
+              Router.push({
+                pathname: `/project-overview`,
+                query: {index: index},
+              })
+            }
+          />
+        ))}
       </div>
     </Screen>
   );

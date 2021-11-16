@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
 
-export const Card = ({title, date, priority, image}) => {
+export const Card = ({title, date, priority, image, onClick}) => {
   return (
-    <div className="h-64 w-full shadow-md rounded mb-8">
+    <div
+      className="h-64 w-full shadow-md rounded mb-8 cursor-pointer"
+      onClick={onClick}>
       <div className="h-1/2 w-full bg-green-100 relative">
         <Image objectFit="cover" src={image} alt="" layout="fill" />
       </div>

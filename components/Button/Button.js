@@ -6,8 +6,8 @@ export const Button = ({text, onClick, variant = "primary"}) => {
     <button
       class={`${
         variant === "primary"
-          ? "bg-blue-500 text-white hover:bg-blue-700"
-          : "bg-transparent border border-blue-500 hover:bg-blue-500 text-blue-700"
+          ? "bg-burnt-sienna text-white hover:opacity-80 "
+          : "bg-white border border-burnt-sienna hover:bg-burnt-sienna hover:text-white text-burnt-sienna"
       } font-bold py-2 px-4 rounded`}
       onClick={onClick}>
       {text}
