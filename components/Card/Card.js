@@ -7,7 +7,7 @@ export const Card = ({title, date, priority, image, onClick}) => {
     <div
       className="h-64 w-full shadow-md rounded mb-8 cursor-pointer"
       onClick={onClick}>
-      <div className="h-1/2 w-full bg-green-100 relative">
+      <div className="h-1/2 w-full relative">
         <Image objectFit="cover" src={image} alt="" layout="fill" />
       </div>
       <div className="h-1/2 w-full bg-white flex flex-col justify-around px-3 rounded">

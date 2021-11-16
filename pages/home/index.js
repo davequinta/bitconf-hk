@@ -22,7 +22,6 @@ const Home = () => {
           <Link href="/add-project">
             <Button
               text="Nueva Propuesta"
-              onClick={() => console.log("nueva propouesta")}
               variant="outlined"
             />
           </Link>
